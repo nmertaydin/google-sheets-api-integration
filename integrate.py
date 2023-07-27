@@ -16,9 +16,9 @@ credentials = service_account.Credentials.from_service_account_file(filename=cre
 service = discovery.build('sheets', 'v4', credentials=credentials)
 
 # Clear sheet contents
-rangeAll = 'Sheet1!A2:Z'
+range_all = 'Sheet1!A2:Z'
 body = {}
-resultClear = service.spreadsheets().values().clear(spreadsheetId=spreadsheet_id, range=rangeAll, body=body).execute()
+resultClear = service.spreadsheets().values().clear(spreadsheetId=spreadsheet_id, range=range_all, body=body).execute()
 
 # Generate mock data
 fake = Faker()
